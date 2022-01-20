@@ -1,0 +1,225 @@
+/* My IT162 BIG Website Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    background: lemonchiffon;
+
+}
+
+div.wrapper, footer {
+    width: 90%;
+    margin: auto;
+    background: #fff;
+    overflow: auto;
+}
+
+.leftcol {
+    width: 65%;
+    float: left;
+    padding-left: 2.5%;
+/*    height: 300px;*/
+/*    background: yellow;*/
+}
+
+.rightcol {	
+    width: 33%;
+    float: right;
+    padding-right: 2.5%;
+/*    height: 300px;*/
+/*    background: green;*/
+}
+
+#web-cycle {
+    width: 100%;
+    padding-right: 50px;
+    padding-left: 20px;
+}
+
+img.desktop {
+    width:100%;
+    display:inline-block;
+}
+
+/*START WEBCAM Styles*/
+.dot {
+    margin-left: 22px;
+    border: 0;
+    height: 236px;
+    width: 336px;
+}
+
+/*END WEBCAM Styles*/
+
+
+/*
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+*/
+
+
+/*Fonts*/
+h1, h2, h3, h4 {
+    font-weight: normal;
+    padding: 0.5em;
+    font-family: 'Rubik', sans-serif;
+/*    font-size: 1.2em;*/
+}
+
+div.rightcol h3 {
+    margin-top: 1.4em;
+    margin-left: 0.6em;
+}
+
+h4 {
+    margin-left: 0.4em;
+/*    padding-left: 1em;*/
+}
+
+.cycle-resource {
+    padding-left: 1em;
+}
+
+p {
+    margin: 1em 0.8em;
+    font-family: 'Karla', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.8;
+
+}
+
+.citation {
+    font-family: 'Karla', sans-serif;
+    line-height: 1.6;
+}
+
+li {
+    margin-bottom: 1em;
+}
+
+
+address {
+    font-family: 'Karla', sans-serif;
+    line-height: 1.6;
+    font-style: normal;
+    margin-bottom: 1em;
+    margin-left: 22px;
+}
+
+.phone {
+    font-family: 'Karla', sans-serif;
+    line-height: 1.6;
+    margin-left: 22px;
+}
+
+main.wrapper {
+/*    background-color:#fff;*/
+/*    background: lemonchiffon;*/
+    overflow:auto;
+    margin: 5px;
+}
+
+h1>a {
+    text-decoration: none;
+    color: #000;
+}
+
+.logo {
+    color: #7678ED;
+    margin-left: 1%;
+    text-shadow: 1px 1px #ccc;
+    font-size: 1.25em; /*font awesome icons are text, so make it a bit bigger */
+    margin-left: 1%; /*this keeps the icon from being squeeezed to the left*/
+}
+
+.contact-feedback {
+    font-style: oblique;
+    color: rebeccapurple;
+    font-size: large;
+}
+
+
+
+/* START Global Embed Responsively Rules! */
+div.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+/*    margin: auto;*/
+    max-width: 100%;
+} 
+
+div.embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Show month view calendar*/
+div.embed-container.month-view {
+    display: block;
+}
+
+/* Hide agenda view of calendar*/
+div.embed-container.agenda-view {
+    display: none;
+}
+/* END Global Embed Responsively Rules!*/
+
+
+footer {
+	clear: both;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+/*    text-transform: uppercase;*/
+}
+
+
+/* Change background color of navigation on selected page */
+ul.topnav li a.selected {
+    background-color: #ccc;
+    color: #000;
+}
+
+
+/*https://www.w3schools.com/howto/howto_js_topnav_responsive.asp*/
+/* Picture sizes:
+Desktop 700px width
+Tablet 500px width
+Phone 320px width
+*/
+
+/* PHONE */
+@media all and (max-width:736px) { 
+    .leftcol, .rightcol {
+        width: 100%;
+    } 
+
+    img.desktop {
+       	display:none;
+    }  
+    
+    
+/*    Hide month view of calender*/
+    div.embed-container.month-view {
+        display: none;
+    }
+    
+    
+/* Show agenda view calendar*/
+    div.embed-container.agenda-view {
+        display: block;
+    }
+}
+
+    
+
