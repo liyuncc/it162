@@ -1,0 +1,171 @@
+/* My IT162 Portal Website Styles */
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: lemonchiffon;
+}
+
+main.wrapper {
+/*    background-color:#fff;*/
+/*    background: lemonchiffon;*/
+    overflow:auto;
+    margin: 5px;
+}
+
+
+h1>a {
+    text-decoration: none;
+    color:#000;
+}
+
+.logo {
+    color: #7678ED;
+    margin-left:1%;
+    text-shadow:1px 1px #ccc;
+    font-size:1.25em; /*font awesome icons are text, so make it a bit bigger */
+    margin-left: 1%; /*this keeps the icon from being squeeezed to the left*/
+}
+
+
+p {
+    line-height: 1.6em;
+}
+
+
+footer {
+	clear:both;
+    margin: 10px;
+    text-align: center;
+}
+
+/*https://www.w3schools.com/howto/howto_js_topnav_responsive.asp*/
+/* Picture sizes:
+Desktop 700px width
+Tablet 500px width
+Phone 320px width
+*/
+/* Embed Responsively Rules! */
+
+div.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: auto;
+    max-width: 98%;
+} 
+
+div.embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+/* START RESPONSIVE STYLES */
+
+/* DESKTOP */
+@media all and (min-width:1400px) {
+	
+   main.wrapper {
+		width:80%;
+		margin:auto;
+	}
+
+    section {
+		width:50%;
+		float:left;
+        margin: 10px;
+	}
+	
+     aside {	
+		width:44%;
+		float:right;
+        margin: 18px;
+	}
+			
+    img.desktop {
+/*        float:left;*/
+       	width:100%;
+        display:inline-block;
+    }
+    
+    img.tablet, img.phone {
+       	display:none;
+    }  
+    
+    /* Change background color of navigation on selected page */
+    ul.topnav li a.selected {
+        background-color: #ccc;
+        color: #000;
+   	 }
+}
+
+
+/* TABLET */
+@media all and (min-width:737px) and (max-width:1399px) {
+	
+	section {
+		width:50%;
+		float:left;
+        margin-top: 10px;
+        margin-left: 25px;
+	}
+	
+	aside {	
+		width:40%;
+		float:right;
+        margin: 20px;
+	}
+	
+    img.tablet {
+       	width:100%;
+        display:inline-block;
+    }
+    
+    img.desktop, img.phone {
+       	display:none;
+    }  
+    
+    
+    /* Change background color of navigation on selected page */
+    ul.topnav li a.selected {
+        background-color: #ccc;
+        color:#000;
+    }
+}
+
+/* PHONE */
+@media all and (max-width:736px) {
+    
+    img.phone {
+       	width:100%;
+        display:inline-block;
+    }
+    
+    img.tablet, img.desktop {
+       	display:none;
+    }  
+    
+    section h2, aside h2 {
+        text-align: center;
+    }
+    
+    footer {
+        clear: both;
+        margin: auto;
+    }
+    
+
+}
+
+    
+
